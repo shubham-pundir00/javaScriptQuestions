@@ -1,4 +1,10 @@
-let str1 = "firststring"
-let str2 = "secondstring"
-let newstr = str1.concat(str2)
-console.log(newstr)
+function concatStr(str1,str2){
+    for(char in str2){
+        str1+=str2[char]
+    }
+    console.log(str1)
+
+}
+let str1 = "shub"
+let str2 = "bham"
+concatStr(str1,str2)

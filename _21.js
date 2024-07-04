@@ -1,5 +1,9 @@
 let str = "shubham"
+function lowestFrequency(){
+
 let newstr = {}
+let minfreq = Infinity
+let freqchar = ''
 for(let char of str){
     if(newstr[char]){
           newstr[char]++; 
@@ -8,8 +12,7 @@ for(let char of str){
         newstr[char] = 1;
     }
 }
-let minfreq = Infinity
-let freqchar = ''
+
 for (let char in newstr){
     if(newstr[char]<minfreq){
         minfreq = newstr[char];
@@ -17,5 +20,11 @@ for (let char in newstr){
     }
     
 }
-console.log(freqchar)
-console.log(minfreq)
+return freqchar;
+
+}
+
+let final = lowestFrequency(str)
+console.log(final)
+
+

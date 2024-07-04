@@ -1,9 +1,12 @@
 let str = "hello world"
 let char = "o"
-let indeces = []
-for(let i =0; i<str.length; i++){
-    if(str[i] === char){
-        indeces.push(i)
+function countOcc(str,char){
+    let count = 0;
+    for(let i = 0; i<str.length; i++){
+        if(str[i] === char){
+            count++;
+        }
     }
+    return count;
 }
-console.log(indeces.length)
+console.log(countOcc(str,char))
