@@ -1,4 +1,4 @@
-function findLastOccurrence(str, word) {
+function findFirstOccurrence(str, word) {
     let words = [];
     let currentWord = "";
 
@@ -14,22 +14,23 @@ function findLastOccurrence(str, word) {
     }
 
     words.push(currentWord);
-    let lastIndex = -1;
+
     for (let i = 0; i < words.length; i++) {
         if (words[i] === word) {
-            lastIndex = i; 
+            return i; 
         }
     }
 
-    return lastIndex; 
+    return -1; 
 }
 
-let str = "Hello world, hello universe, hello";
+let str = "Hello world, hello universe";
 let word = "hello";
 
-let index = findLastOccurrence(str, word);
+
+let index = findFirstOccurrence(str, word);
 if (index !== -1) {
     console.log(index);
 } else {
-    console.log('not found');
+    console.log("word is not found");
 }

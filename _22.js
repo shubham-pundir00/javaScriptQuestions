@@ -1,5 +1,6 @@
 let str = "hello world"
-let ndic = {}
+function countFrequency(str){
+    let ndic = {}
 for(char of str){
     if(ndic[char]){
         ndic[char]++;
@@ -8,4 +9,8 @@ for(char of str){
         ndic[char] = 1;
     }
 }
-console.log(ndic)
+return ndic;
+}
+let final = countFrequency(str)
+console.log(final)
+
